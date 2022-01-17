@@ -40,7 +40,7 @@ export default function BasicGrid() {
               Each quarter, 100 of you Good Doods will be rewarded with the gifts featured in your GDGC
               membership card.  
             </ p>    
-            <a href=" https://trello.com/goodgoodgivingclub" target="blank" style={{ color: "#a8cfe5", display: "flex", justifyContent: "left", textAlign: "justify", fontSize:"18px", paddingTop: "15px" }}>
+            <a href=" https://docs.google.com/document/d/1gSUQF4KOXTVoA97vpnZ2Oy0A7HXB6kXx5pgGTVZxa3g/edit?usp=sharing" target="blank" style={{ color: "#a8cfe5", display: "flex", justifyContent: "left", textAlign: "justify", fontSize:"18px", paddingTop: "15px" }}>
 
 Explore our giving model
     
