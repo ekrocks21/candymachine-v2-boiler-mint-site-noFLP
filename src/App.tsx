@@ -1,5 +1,18 @@
 import "./App.css";
 import { useMemo } from "react";
+import HeaderImage from "./images/happydood.png";
+import Doods from './components/doods';
+import TheDoods from "./components/thedoods"
+import Team from "./components/teams";
+import Roadmap from "./components/roadmap";
+import Roadmap2 from "./components/roadmap2";
+import Footer from "./components/footer";
+import TheDoods2 from "./components/doodscopy";
+import Perks from "./components/perks";
+import LogoImage from "./images/Asset3.svg";
+import Nav from './components/nav'
+import styled from "styled-components";
+import { Container, Accordion, AccordionSummary, AccordionDetails, Button, CircularProgress, Snackbar, Grid, Paper, Box,BoxProps, Card, Typography, CardMedia, CardContent, CardActions, } from "@material-ui/core";
 
 import Minter from "./Minter";
 
@@ -56,81 +69,31 @@ const App = () => {
   }
 
   return (
-    <div>
-      <div id="mobileNavContainer" className="mobile-nav">
-        <div className="mobile-nav-close-button" >
-          <img src="/icons/close.svg" alt="" onClick={toggleMenu}/>
-        </div>
-        <ul>
-          <li>
-            <img className="mobile-nav-logo" src="/img/logo.png" alt="" />
-          </li>
-          <li>
-            <a href="/#link1" onClick={toggleMenu}>
-              Link 1
-            </a>
-          </li>
-          <li>
-            <a href="/#link2" onClick={toggleMenu}>
-              Link 2
-            </a>
-          </li>
-          <li>
-            <a href="/#link3" onClick={toggleMenu}>
-              Link 3
-            </a>
-          </li>
-          <li>
-            <a href="/#link4" onClick={toggleMenu}>
-              Link 4
-            </a>
-          </li>
-          <li>
-            <div className="social-icons">
-              <img className="nav-social" src="/icons/twitter.svg" alt="" />
-              <img className="nav-social" src="/icons/discord.svg" alt="" />
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div className="mobile-menu-button" onClick={toggleMenu}>
-        <img src="/icons/menu.svg" alt="" />
-      </div>
-      <nav>
-        <div className="nav-container">
-          <img className="nav-logo" src="/img/logo.png" alt="" />
-          <a className="hide-800" href="/#link1">
-            Link 1
-          </a>
-          <a className="hide-800" href="/#link2">
-            Link 2
-          </a>
-          <a className="hide-800" href="/#link3">
-            Link 3
-          </a>
-          <a className="hide-800" href="/#link4">
-            Link 4
-          </a>
-          <div className="social-icons hide-800">
-            <img className="nav-social" src="/icons/twitter.svg" alt="" />
-            <img className="nav-social" src="/icons/discord.svg" alt="" />
-          </div>
-        </div>
-      </nav>
-      <div className="content-wrapper">
-          <header className="card" id="link1">
-            <div style={{ padding: "0 24px 0 24px 0" }}>
-              <h3 className="text-secondary-color">Welcome To</h3>
-              <h1 className="pb-3">The Boiler Plate</h1>
-              <p className="text-secondary-color">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                scelerisque ipsum non est porta mollis. Donec sapien sapien, dictum
-                eget enim sed, hendrerit semper orci. Donec ante magna, consequat at
-                eros ac, eleifend dictum sem. Nam vitae condimentum lorem.
-                Vestibulum molestie dui turpis, tincidunt porta sem congue nec.
-              </p>
-            </div>
-            <div>
+    <main style={{ display: "flex", height: "100vh", backgroundColor: "#24305e",}}>
+      <div style={{display: "flex", flex: 1, flexDirection: "column", }}>
+        <div style={{display: "flex", justifyContent: "space-between", maxHeight: "120px", paddingLeft: '5%', paddingRight:'10%', paddingTop: '3%' }}>
+          <img src={LogoImage} alt="Logo"
+          style={{
+          maxWidth: "20%",
+          height: "auto",
+          marginLeft: "20px",
+          minWidth: "15%",
+          display: "flex",
+          justifyContent: "left"}}
+          />
+        </div> 
+        <div className="content-wrapper">
+            <div style={{ flex: 1, display: "flex",justifyContent: "center",alignItems: "center",flexDirection: "column",}}>
+          <div style={{flex: 1, display: "flex",justifyContent: "center", alignItems: "center",flexDirection: "column", padding: "20px" }}>
+            <img src={HeaderImage} alt="Header"
+            style={{
+            maxWidth: "62%",
+            minWidth: "300px",
+            height: "auto",
+            }}
+            />
+
+            <div style ={{ position: "absolute"}}>
               <ThemeProvider theme={theme}>
                 <ConnectionProvider endpoint={endpoint}>
                   <WalletProvider wallets={wallets} autoConnect>
@@ -150,65 +113,21 @@ const App = () => {
                 </ConnectionProvider>
               </ThemeProvider>
             </div>
-          </header>
-
-          <div id="link2" className="container">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit
-            aliquet, semper sapien sed, ornare augue. Phasellus sed velit interdum,
-            sagittis metus quis, facilisis lectus. Cras sollicitudin purus at magna
-            eleifend maximus. Nulla nec nulla in nunc maximus viverra in at mauris.
-            Fusce sodales dolor nisi, et vehicula orci porta id. In placerat nunc
-            sed erat lacinia tincidunt. Interdum et malesuada fames ac ante ipsum
-            primis in faucibus. Vestibulum commodo eget metus vitae tempus. Aliquam
-            pharetra mi at efficitur accumsan. Curabitur venenatis libero a ex
-            porttitor, at auctor turpis hendrerit. Nam commodo, risus non consequat
-            pretium, erat ante auctor purus, a cursus dolor erat at velit. Maecenas
-            dignissim, dolor sed laoreet aliquam, tortor lacus faucibus urna, eget
-            mattis massa sem ac dui. Nam semper hendrerit interdum. Etiam at dictum
-            nisi.
-          </div>
-
-          <div id="link3" className="container card">
-            <h1 className="pb-3">Lorem ipsum</h1>
-          </div>
-
-          <div id="link4" className="container faq">
-            <h1 style={{ padding: "0 0 24px 0" }}>FAQ</h1>
-            <div>
-              <h4>Lorem ipsum?</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                id metus id mauris tincidunt posuere. Vivamus neque odio, imperdiet
-                vitae.
-              </p>
-
-              <hr />
-            </div>
-
-            <div>
-              <h4>Lorem ipsum?</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                id metus id mauris tincidunt posuere. Vivamus neque odio, imperdiet
-                vitae.
-              </p>
-
-              <hr />
-            </div>
-
-            <div>
-              <h4>Lorem ipsum?</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                id metus id mauris tincidunt posuere. Vivamus neque odio, imperdiet
-                vitae.
-              </p>
-
-              <hr />
             </div>
           </div>
-      </div>
-    </div>
+          </div>
+          <Doods/>
+          <TheDoods2/>
+          <Perks/>
+          <Roadmap/>
+           <div><Roadmap2/></div>
+           <TheDoods/>   
+            <Team/>
+          <Footer/>
+          </div>
+          
+
+      </main>
   );
 };
 
