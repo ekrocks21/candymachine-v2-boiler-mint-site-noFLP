@@ -46,6 +46,7 @@ const rows = [
   createData( 23, 'Vote on Project #01 Beneficiary ', 'Not Started' ),
   createData( 24, 'Do a bunch of Good ', 'In Progress' ),
   createData( 25, '??? ', '???' ),
+  createData( 26, '??? ', '???' ),
 ];
 
 export default function BasicTable() {
